@@ -4,7 +4,11 @@ on: [push]
 
 jobs:
   run-shell-command:
-    runs-on: [self-hosted, Linux]
+    runs-on: [self-hosted]
     steps:
       - name: echo a string
         run: echo "Hello World"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
